@@ -20,6 +20,11 @@
                 color: #333;
             }
 
+            a:hover {
+                color: rgb(123, 186, 170);
+                transition: all 0.5s;
+            }
+
             /*common css  */
             .pill {
                 background: #000;
@@ -35,6 +40,26 @@
             .layout {
                 max-width: 1100px;
                 margin: 0 auto;
+            }
+
+            .button {
+                display: inline-block;
+                border: 1.5px solid #888;
+                border-radius: 5px;
+                padding: 5px;
+                margin: 10px -20px 0 30px;
+            }
+
+            .button:hover {
+                color: #7bbaaa;
+                border-color: #7bbaaa;
+                transition: all 0.5s;
+            }
+
+            .highlight {
+                font-weight: 666;
+                color: rgb(255, 117, 0);
+                background-color: #eee;
             }
 
             .clearfix::after {
@@ -112,6 +137,7 @@
 
             .aside .skills {
                 background: #7bbaaa;
+                font-weight: 666;
                 padding: 20px;
                 color: #fff;
             }
@@ -158,8 +184,12 @@
             .main .intro p {
                 margin-left: 120px;
             }
+            .main .item {
+                margin-bottom: 20px;
+            }
 
-            .section {
+            .main .item .more p {
+                margin-left: 30px;
             }
 
             .section .pill {
@@ -209,7 +239,7 @@
 
             .section .more ul {
                 margin-left: 50px;
-                padding-bottom: 20px;
+                /* padding-bottom: 20px; */
             }
             .section .more li {
                 color: #666;
@@ -266,12 +296,12 @@
                         <dd><span class="mastery" style="width: 50%;"></span></dd>
                         <dt>Webpack/Parcel/Npm Script</dt>
                         <dd><span class="mastery" style="width: 60%;"></span></dd>
-                        <dt>ES6/Sass/Stylus</dt>
-                        <dd><span class="mastery" style="width: 70%;"></span></dd>
+                        <dt>ES6/SCSS/Stylus</dt>
+                        <dd><span class="mastery" style="width: 80%;"></span></dd>
                         <dt>HTTP/AJAX/Axios</dt>
                         <dd><span class="mastery" style="width: 70%;"></span></dd>
                         <dt>Linux/Git</dt>
-                        <dd><span class="mastery" style="width: 70%;"></span></dd>
+                        <dd><span class="mastery" style="width: 60%;"></span></dd>
                     </dl>
                 </div>
                 <div class="others">
@@ -308,138 +338,145 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="experience section">
-                        <h2>工作经历</h2>
-                        <div class="detail">
-                            <div class="left pill">01/2016 - 现在</div>
-                            <div class="more">
-                                <h3><strong>杭州饥人谷教育科技有限公司</strong>, 前端开发工程师</h3>
-                                <ul>
-                                    <li>
-                                        工作期间参与开发和维护饥人谷官网、课程平台、移动端网站、小程序，为数千同学线上学习提供技术支撑
-                                    </li>
-                                    <li>公司前端编码规范的制定、前端UI组件库的沉淀</li>
-                                    <li>多次作为项目负责人主导项目立项到上线整个过程</li>
-                                </ul>
-                                <h4>写代码啦课程平台Web端项目</h4>
-                                <ul>
-                                    <li>
-                                        <strong>项目介绍：</strong>
-                                        该项目的目的是搭建线上学习平台，把线下课堂的完整学习流程搬到线上，平台包括课程展示、购买、直播、录播、作业、权限管理、停课复课、试听等几十个大功能。该项目采用前后分离的技术方案，
-                                        我主要负责前端部分的开发。项目前端部分使用Vue技术栈，移动端平台使用自己实现的vue
-                                        ui组件库。
-                                    </li>
-                                    <li>
-                                        <strong>技术栈：</strong
-                                        >vue、vue-router、vuex、element-ui、typescript、webpack、es6、移动端
-                                    </li>
-                                    <li>
-                                        <strong>项目成果:</strong>
-                                        项目支撑饥人谷日常教学活动、运营活动的正常开展，支持数千学生的日常线上学习，几十万用户的日常访问。
-                                    </li>
-                                </ul>
-
-                                <h4>写代码啦课程平台小程序项目</h4>
-                                <ul>
-                                    <li>
-                                        <strong>项目介绍：</strong>
-                                        该项目是线上学习平台的小程序版本，拥有web版本的绝大多数的功能，如课程分类、搜索、任务学习、直播等。项目使用mpvue作为开发的主要框架，目前小程序已发布。
-                                    </li>
-                                    <li><strong>技术栈：</strong>mpvue/vue/vuex/webpack/es6</li>
-                                    <li>
-                                        <strong>项目成果:</strong
-                                        >大大提升了移动端学习体验，获得学生用户的多次好评，为微信端运营提供技术支撑
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                     <div class="projects section">
                         <h2>项目经历</h2>
                         <div class="item">
+                            <div class="left pill">09/2019 - 12/2019</div>
+                            <div class="more">
+                                <h3>Wheels-Lite——自制UI组件库</h3>
+                                <p>
+                                    <strong>项目介绍：</strong>
+                                </p>
+                                <ul>
+                                    <li>
+                                        该项目是受到Element UI、Ant Design等UI库启发，实现的一套基于<span
+                                            class="highlight"
+                                            >Vue</span
+                                        >的简易UI组件库。
+                                    </li>
+                                    <li>
+                                        每个组件均是日常开发的痛点需求，经历了需求分析到
+                                        <span class="highlight">Mocha</span>单元测试，<span class="highlight"
+                                            >TravisCI</span
+                                        >实现持续集成，以及<span class="highlight">VuePress</span
+                                        >为基础制作官方文档，最终发布于npmjs.org。
+                                    </li>
+                                    <li>
+                                        通过该项目，我对Vue的常用特征更加熟悉，同时加深了对前端工程化流程以及单元测试重要性的理解，进一步了解了开源文化。
+                                    </li>
+                                </ul>
+                                <p>
+                                    <strong>技术栈：</strong>Vue、VuePress、ES6、Parcel、NPM
+                                    Script、Mocha、SCSS、TravisCI
+                                </p>
+                                <div class="button">
+                                    <a href="#" target="_blank"><strong>源码</strong></a>
+                                </div>
+                                <div class="button">
+                                    <a href="#" target="_blank"><strong>预览</strong></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left pill">09/2019 - 12/2019</div>
+                            <div class="more">
+                                <h3>穷了么——手机记账本</h3>
+                                <p>
+                                    <strong>项目介绍：</strong>
+                                </p>
+                                <ul>
+                                    <li>
+                                        穷了么？那就记账吧。这是一款基于<span class="highlight">TypeScript</span
+                                        >、React、React
+                                        Router实现的单页面应用。从UI设计到打包上线，均由本人独立完成。源码几乎全部由TypeScript实现，用到了如装饰器等语法。
+                                    </li>
+                                    <li>功能包括：记账、明细、标签管理、图表统计等。</li>
+                                    <li>
+                                        项目使用以<span class="highlight">create-react-app</span
+                                        >为基础创建项目模板，使用<span class="highlight">styled-components</span
+                                        >处理CSS加速开发，通过<span class="highlight">React Router</span
+                                        >实现路由的跳转，使用<span class="highlight">React Hooks</span
+                                        >管理state，用<span class="highlight">Axios</span>获取数据，并对接口进行了封装。
+                                    </li>
+                                </ul>
+                                <p>
+                                    <strong>技术栈：</strong>TypeScript、React、React Router、React Hooks、ES6、NPM
+                                    Script、styled-components
+                                </p>
+                                <div class="button">
+                                    <a href="#" target="_blank"><strong>源码</strong></a>
+                                </div>
+                                <div class="button">
+                                    <a href="#" target="_blank"><strong>预览</strong></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
                             <div class="left pill">08/2019 - 09/2019</div>
                             <div class="more">
-                                <h3>vue技术栈实现cnode社区</h3>
+                                <h3>中文技术社区</h3>
+                                <p>
+                                    <strong>项目介绍：</strong>
+                                </p>
                                 <ul>
                                     <li>
-                                        <strong>项目介绍：</strong>
-                                        为什么做这个项目(解决了什么问题)，提供了哪些功能。我在项目中承担的角色，用到了哪些技术，做了过程中遇到了什么问题，你是如何解决的，在代码复用性、体验、性能、ui上做了哪些优化
-                                    </li>
-                                    <li><strong>技术栈：</strong>vue、vue-router、vuex、element-ui、webpack、es6</li>
-                                    <li>
-                                        <strong>项目源码:</strong
-                                        ><a href="https://github.com/Shawn-Nevermore/cnode" target="_blank"
-                                            >github.com/Shawn-Nevermore/cnode</a
-                                        >
+                                        该项目是一个使用CNode社区API构造的中文技术社区。能实现获取用户列表，用户详情页，注册登录，标签分类，分页等功能。
                                     </li>
                                     <li>
-                                        <strong>预览项目:</strong
-                                        ><a href="https://uiao.me/cnode" target="_blank">点击查看</a>
+                                        使用<span class="highlight">Vue-CLI</span>创建项目模板，<span class="highlight"
+                                            >stylus</span
+                                        >预处理CSS，通过<span class="highlight">Vue Router</span
+                                        >实现路由的跳转，使用<span class="highlight">Vuex</span>来管理状态，用<span
+                                            class="highlight"
+                                            >Axios</span
+                                        >获取数据。
                                     </li>
                                 </ul>
+                                <p><strong>技术栈：</strong>Vue、Vue Router、Vuex、stylus、Axios</p>
+                                <div class="button">
+                                    <a href="#" target="_blank"><strong>源码</strong></a>
+                                </div>
+                                <div class="button">
+                                    <a href="#" target="_blank"><strong>预览</strong></a>
+                                </div>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="left pill">02/2018 - 08/2018</div>
+                            <div class="left pill">06/2019 - 07/2019</div>
                             <div class="more">
-                                <h3>easyui一款简易vue ui组件库</h3>
-                                <ul>
-                                    <li>
-                                        <strong>项目介绍：</strong>
-                                        为什么做这个项目(解决了什么问题)，提供了哪些功能。我在项目中承担的角色，用到了哪些技术，做了过程中遇到了什么问题，你是如何解决的，在代码复用性、体验、性能、ui上做了哪些优化
-                                    </li>
-                                    <li><strong>技术栈：</strong>vue、vue-router、vuex、element-ui、webpack、es6</li>
-                                    <li>
-                                        <strong>项目源码:</strong
-                                        ><a href="https://jirengu.com/" target="_blank">github.com/jirengu</a>
-                                    </li>
-                                    <li>
-                                        <strong>预览项目:</strong
-                                        ><a href="https://jirengu.com/" target="_blank">点击查看</a>
-                                    </li>
-                                </ul>
+                                <h3>Resume Dance——一个会动的简历</h3>
+                                <p>
+                                    <strong>项目介绍：</strong>
+                                </p>
+                                <ul></ul>
+                                <p><strong>技术栈：</strong></p>
+                                <div class="button">
+                                    <a href="https://github.com/Shawn-Nevermore/resume-dance" target="_blank"
+                                        ><strong>源码</strong></a
+                                    >
+                                </div>
+                                <div class="button">
+                                    <a href="http://uiao.me/resume-dance" target="_blank"><strong>预览</strong></a>
+                                </div>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="left pill">07/2018 - 08/2018</div>
+                            <div class="left pill">03/2019 - 04/2019</div>
                             <div class="more">
-                                <h3>知心天气小程序</h3>
-                                <ul>
-                                    <li>
-                                        <strong>项目介绍：</strong>
-                                        为什么做这个项目(解决了什么问题)，提供了哪些功能。我在项目中承担的角色，用到了哪些技术，做了过程中遇到了什么问题，你是如何解决的，在代码复用性、体验、性能、ui上做了哪些优化
-                                    </li>
-                                    <li><strong>技术栈：</strong>vue、vue-router、vuex、element-ui、webpack、es6</li>
-                                    <li>
-                                        <strong>项目源码:</strong
-                                        ><a href="https://jirengu.com/" target="_blank">github.com/jirengu</a>
-                                    </li>
-                                    <li>
-                                        <strong>预览项目:</strong
-                                        ><a href="https://jirengu.com/" target="_blank">点击查看</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="left pill">08/2018 - 10/2018</div>
-                            <div class="more">
-                                <h3>在线云笔记</h3>
-                                <ul>
-                                    <li>
-                                        <strong>项目介绍：</strong>
-                                        为什么做这个项目(解决了什么问题)，提供了哪些功能。我在项目中承担的角色，用到了哪些技术，做了过程中遇到了什么问题，你是如何解决的，在代码复用性、体验、性能、ui上做了哪些优化
-                                    </li>
-                                    <li><strong>技术栈：</strong>vue、vue-router、vuex、element-ui、webpack、es6</li>
-                                    <li>
-                                        <strong>项目源码:</strong
-                                        ><a href="https://jirengu.com/" target="_blank">github.com/jirengu</a>
-                                    </li>
-                                    <li>
-                                        <strong>预览项目:</strong
-                                        ><a href="https://jirengu.com/" target="_blank">点击查看</a>
-                                    </li>
-                                </ul>
+                                <h3>Graffiti——涂鸦小画板</h3>
+                                <p>
+                                    <strong>项目介绍：</strong>
+                                </p>
+                                <ul></ul>
+                                <p><strong>技术栈：</strong></p>
+                                <div class="button">
+                                    <a href="https://github.com/Shawn-Nevermore/graffiti" target="_blank"
+                                        ><strong>源码</strong></a
+                                    >
+                                </div>
+                                <div class="button">
+                                    <a href="http://uiao.me/graffiti" target="_blank"><strong>预览</strong></a>
+                                </div>
                             </div>
                         </div>
                     </div>
